@@ -1,0 +1,80 @@
+@prefix : <http://example.org/> .
+
+:Candy a :Music ;
+    :hasArtist :LL_Cool_J ;
+    :hasGenre :pop_music .
+
+:Citadel a :Music ;
+    :hasArtist :The_Damned ;
+    :hasGenre :drama_film .
+
+:Down_the_Drain a :Music ;
+    :hasArtist :Down_by_Law ;
+    :hasGenre :drama_film .
+
+:Hannah a :Music ;
+    :hasArtist :Sheila_Nicholls ;
+    :hasGenre :Unknown .
+
+:Hymn a :Music ;
+    :hasArtist :Patti_Smith ;
+    :hasGenre :Unknown .
+
+:I_Was_Born_About_Ten_Thousand_Years_Ago a :Music ;
+    :hasArtist :Elvis_Presley ;
+    :hasGenre :rock_and_roll .
+
+:Little_Birds a :Music ;
+    :hasArtist :Dead_to_Fall ;
+    :hasGenre :indie_rock .
+
+:Mental_Slavery a :Music ;
+    :hasArtist :Kreator ;
+    :hasGenre :thrash_metal .
+
+:Playin__Dominoes_and_Shootin__Dice a :Music ;
+    :hasArtist :Willie_Nelson ;
+    :hasGenre :blues .
+
+:hasArtist a :Property .
+
+:hasGenre a :Property .
+
+:Dead_to_Fall a :Artist .
+
+:Down_by_Law a :Artist .
+
+:Elvis_Presley a :Artist .
+
+:Kreator a :Artist .
+
+:LL_Cool_J a :Artist .
+
+:Patti_Smith a :Artist .
+
+:Sheila_Nicholls a :Artist .
+
+:The_Damned a :Artist .
+
+:Willie_Nelson a :Artist .
+
+:blues a :Genre .
+
+:indie_rock a :Genre .
+
+:pop_music a :Genre .
+
+:rock_and_roll a :Genre .
+
+:thrash_metal a :Genre .
+
+:Unknown a :Genre .
+
+:drama_film a :Genre .
+
+:Genre a :Class .
+
+:Artist a :Class .
+
+:Music a :Class .
+
