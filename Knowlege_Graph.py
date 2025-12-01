@@ -1,70 +1,79 @@
 from datasets import load_dataset
 import os
 from transformers import pipeline
+import pandas as pd
 
 
 #classifier = pipeline("text-classification", model="j-hartmann/emotion-english-distilroberta-base", top_k = 3)
-#print(classifier("I hate this."))
+#data = pd.read_csv("lyrics_with_genre.csv")
+#
+#data['seq'] = data['seq'].str.replace("_x000D_", "", regex=False)
+#
+#dataHead = data.head()
+#
+#print(dataHead)
+#x = dataHead.iloc[0]["seq"]
+#print(classifier(x))
+#print(x)
 
-from rdflib import Graph, Namespace, Literal, RDF, URIRef
+from rdflib import Graph, Namespace, RDF
 from pyvis.network import Network
-import json
+import ast
 
-#with open("genre_cache.json", "r", encoding="utf-8") as f:
-#    data = json.load(f)
+data = pd.read_csv("final.csv")
 
-data = {
-  "I Was Born About Ten Thousand Years Ago||Elvis Presley": "rock and roll",
-  "Citadel||The Damned": "drama film",
-  "Down the Drain||Down by Law": "drama film",
-  "Hymn||Patti Smith": "Unknown",
-  "Candy||LL Cool J": "pop music",
-  "Little Birds||Dead to Fall": "indie rock",
-  "Hannah||Sheila Nicholls": "Unknown",
-  "Mental Slavery||Kreator": "thrash metal",
-  "Playin' Dominoes and Shootin' Dice||Willie Nelson": "blues"
-}
+data = data.head(10)
 
-# Criar o grafo
+# FUNÇÃO PARA LIMPAR URIs
+def clean_uri(x):
+    return x.replace(" ", "_").replace("/", "_").replace("\"", "").replace("'", "_")
+
+# CRIAR GRAFO RDF
 g = Graph()
-
 EX = Namespace("http://example.org/")
 g.bind("", EX)
 
-# Criar classes
+# DEFINIR CLASSES
 g.add((EX.Music, RDF.type, EX.Class))
 g.add((EX.Artist, RDF.type, EX.Class))
 g.add((EX.Genre, RDF.type, EX.Class))
+g.add((EX.Emotion, RDF.type, EX.Class))
 
-# Criar propriedades
+# DEFINIR PROPRIEDADES
 g.add((EX.hasArtist, RDF.type, EX.Property))
 g.add((EX.hasGenre, RDF.type, EX.Property))
+g.add((EX.hasEmotion, RDF.type, EX.Property))
 
-# --------- ADICIONAR INDIVÍDUOS ---------
-for key, genre in data.items():
-    title, artist = key.split("||")
+for _, row in data.iterrows():
 
-    # Criar URIs "limpos"
-    title_uri = EX[title.replace(" ", "_").replace("/", "_").replace("\"", "").replace("'", "_")]
-    artist_uri = EX[artist.replace(" ", "_").replace("/", "_").replace("\"", "")]
-    genre_uri = EX[genre.replace(" ", "_").replace("/", "_")]
+    title_uri   = EX[clean_uri(row["song"])]
+    artist_uri  = EX[clean_uri(row["artist"])]
+    genre_uri   = EX[clean_uri(row["genre"])]
 
-    # Música é indivíduo da classe Music
+    # --- converter o texto '{'sadness':0.83}' num dicionário ---
+    emotions_dict = ast.literal_eval(row["predicted_emotions"])
+
+    # --- criar URIs para todas as emoções ---
+    emotion_uris = [EX[clean_uri(em)] for em in emotions_dict.keys()]
+
+    # tipos das instâncias
     g.add((title_uri, RDF.type, EX.Music))
-
-    # Artista é indivíduo da classe Artist
     g.add((artist_uri, RDF.type, EX.Artist))
-
-    # Género é indivíduo da classe Genre
     g.add((genre_uri, RDF.type, EX.Genre))
 
-    # Relacionar a música com artista e género
+    for em_uri in emotion_uris:
+        g.add((em_uri, RDF.type, EX.Emotion))
+
+    # relações
     g.add((title_uri, EX.hasArtist, artist_uri))
     g.add((title_uri, EX.hasGenre, genre_uri))
 
+    # ligar música → todas as emoções
+    for em_uri in emotion_uris:
+        g.add((title_uri, EX.hasEmotion, em_uri))
+
 g.serialize("musicas.ttl", format="turtle")
 
-# Carregar o teu grafo RDFLib
 g = Graph()
 g.parse("musicas.ttl", format="turtle")
 
@@ -73,19 +82,20 @@ net = Network(height="750px", width="100%", directed=True)
 net.barnes_hut()  # layout melhor para grafos maiores
 
 # iremos recolher tipos (Music / Artist / Genre) e depois construir nós/arestas sem triples rdf:type visíveis
-class_uris = {EX.Music, EX.Artist, EX.Genre}
+class_uris = {EX.Music, EX.Artist, EX.Genre, EX.Emotion}
 node_type = {}   # mapa: URI -> 'Music'|'Artist'|'Genre'|'Other'
 
-# primeiro passar pelos triples para identificar rdf:type de instâncias
+# Identificar tipos
 for s, p, o in g:
     if p == RDF.type and o in class_uris:
-        # marca o tipo da instância (s é a instância, o é a classe)
         if o == EX.Music:
             node_type[s] = "Music"
         elif o == EX.Artist:
             node_type[s] = "Artist"
         elif o == EX.Genre:
             node_type[s] = "Genre"
+        elif o == EX.Emotion:
+            node_type[s] = "Emotion"
 
 # depois criar nós e arestas (ignorando triples que apenas declaram as classes em si)
 seen_nodes = set()
@@ -102,7 +112,8 @@ def pretty_label(uri):
 group_map = {
     "Music": "music",
     "Artist": "artist",
-    "Genre": "genre"
+    "Genre": "genre",
+    "Emotion": "emotion"
 }
 
 # Adicionar nós e arestas: para cada triple, se for rdf:type (instância->classe) já processado -> ignorar visualmente.
