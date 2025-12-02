@@ -1,76 +1,245 @@
 @prefix : <http://example.org/> .
 
-:Candy a :Music ;
-    :hasArtist :LL_Cool_J ;
+:Alone a :Music ;
+    :hasArtist :Gabrielle ;
+    :hasEmotion :sadness ;
+    :hasGenre :alternative_rock .
+
+:America_the_Beautiful a :Music ;
+    :hasArtist :Bob_Masteller ;
+    :hasEmotion :joy ;
+    :hasGenre :Unknown .
+
+:Ballroom_Blitz a :Music ;
+    :hasArtist :The_Damned ;
+    :hasEmotion :fear ;
+    :hasGenre :drama_film .
+
+:Black_Satellite a :Music ;
+    :hasArtist :American_Hi-Fi ;
+    :hasEmotion :fear,
+        :surprise ;
+    :hasGenre :alternative_rock .
+
+:Brand_New_Day a :Music ;
+    :hasArtist :Gary_Cooke ;
+    :hasEmotion :sadness ;
+    :hasGenre :alternative_rock .
+
+:Concrete_Jungle a :Music ;
+    :hasArtist :Bob_Marley ;
+    :hasEmotion :fear,
+        :neutral,
+        :sadness ;
+    :hasGenre :reggae .
+
+:Consequence_of_Laughing a :Music ;
+    :hasArtist :Our_Lady_Peace ;
+    :hasEmotion :anger ;
+    :hasGenre :alternative_rock .
+
+<http://example.org/Da_Ya_Think_I_m_Sexy_[Craig_J._s_Gospel_Love_Mix]> a :Music ;
+    :hasArtist :Rod_Stewart ;
+    :hasEmotion :fear ;
+    :hasGenre :rock_music .
+
+:Eight_Days_a_Week a :Music ;
+    :hasArtist :Fab_Again ;
+    :hasEmotion :joy,
+        :neutral,
+        :sadness ;
+    :hasGenre :Unknown .
+
+:Ever_True_Evermore a :Music ;
+    :hasArtist :Mandy_Barnett ;
+    :hasEmotion :joy,
+        :neutral,
+        :sadness ;
+    :hasGenre :folk_music .
+
+:Good_II_Me a :Music ;
+    :hasArtist :Bun_B ;
+    :hasEmotion :disgust,
+        :neutral ;
+    :hasGenre :gangsta_rap .
+
+:Hey_Jude a :Music ;
+    :hasArtist :Bill_Black ;
+    :hasEmotion :fear ;
+    :hasGenre :rockabilly .
+
+:I_Do_Not_Know_a_Day_I_Did_Not_Love_You a :Music ;
+    :hasArtist :Tony_Bennett ;
+    :hasEmotion :sadness ;
+    :hasGenre :jazz .
+
+:I_Think_I_m_Wonderful a :Music ;
+    :hasArtist :The_Damned ;
+    :hasEmotion :anger,
+        :fear ;
+    :hasGenre :drama_film .
+
+<http://example.org/In_the_Darkness_[Trance_Mix]> a :Music ;
+    :hasArtist :Darude ;
+    :hasEmotion :fear ;
+    :hasGenre :house_music .
+
+:Just_Around_the_Eyes a :Music ;
+    :hasArtist :Faith_Hill ;
+    :hasEmotion :fear,
+        :surprise ;
+    :hasGenre :country_music .
+
+:Level_on_the_Inside a :Music ;
+    :hasArtist :Dovetail_Joint ;
+    :hasEmotion :sadness ;
+    :hasGenre :alternative_rock .
+
+:Lights_Out a :Music ;
+    :hasArtist :Newsboys ;
+    :hasEmotion :neutral ;
+    :hasGenre :nu_metal .
+
+:Lollipops_and_Roses a :Music ;
+    :hasArtist :Natalie_Cole ;
+    :hasEmotion :neutral ;
     :hasGenre :pop_music .
 
-:Citadel a :Music ;
-    :hasArtist :The_Damned ;
-    :hasGenre :drama_film .
+:So_High a :Music ;
+    :hasArtist :Eliza_Doolittle ;
+    :hasEmotion :anger,
+        :joy,
+        :sadness ;
+    :hasGenre :pop_music .
 
-:Down_the_Drain a :Music ;
-    :hasArtist :Down_by_Law ;
-    :hasGenre :drama_film .
+<http://example.org/That_s_Entertainment!> a :Music ;
+    :hasArtist :Michael_Feinstein ;
+    :hasEmotion :anger,
+        :disgust ;
+    :hasGenre :traditional_pop .
 
-:Hannah a :Music ;
-    :hasArtist :Sheila_Nicholls ;
+:The_Cabinet a :Music ;
+    :hasArtist :Anja_Garbarek ;
+    :hasEmotion :fear ;
+    :hasGenre :trip_hop .
+
+:The_Lord_s_Prayer a :Music ;
+    :hasArtist :Christopher_West ;
+    :hasEmotion :anger,
+        :disgust ;
     :hasGenre :Unknown .
 
-:Hymn a :Music ;
-    :hasArtist :Patti_Smith ;
+:The_Wacky_World_of_Rapid_Transit a :Music ;
+    :hasArtist :Del_the_Funky_Homosapien ;
+    :hasEmotion :anger ;
+    :hasGenre :hip-hop .
+
+:The_Way_You_Move a :Music ;
+    :hasArtist :Audrey_Assad ;
+    :hasEmotion :fear ;
     :hasGenre :Unknown .
-
-:I_Was_Born_About_Ten_Thousand_Years_Ago a :Music ;
-    :hasArtist :Elvis_Presley ;
-    :hasGenre :rock_and_roll .
-
-:Little_Birds a :Music ;
-    :hasArtist :Dead_to_Fall ;
-    :hasGenre :indie_rock .
-
-:Mental_Slavery a :Music ;
-    :hasArtist :Kreator ;
-    :hasGenre :thrash_metal .
-
-:Playin__Dominoes_and_Shootin__Dice a :Music ;
-    :hasArtist :Willie_Nelson ;
-    :hasGenre :blues .
 
 :hasArtist a :Property .
 
+:hasEmotion a :Property .
+
 :hasGenre a :Property .
 
-:Dead_to_Fall a :Artist .
+:American_Hi-Fi a :Artist .
 
-:Down_by_Law a :Artist .
+:Anja_Garbarek a :Artist .
 
-:Elvis_Presley a :Artist .
+:Audrey_Assad a :Artist .
 
-:Kreator a :Artist .
+:Bill_Black a :Artist .
 
-:LL_Cool_J a :Artist .
+:Bob_Marley a :Artist .
 
-:Patti_Smith a :Artist .
+:Bob_Masteller a :Artist .
 
-:Sheila_Nicholls a :Artist .
+:Bun_B a :Artist .
+
+:Christopher_West a :Artist .
+
+:Darude a :Artist .
+
+:Del_the_Funky_Homosapien a :Artist .
+
+:Dovetail_Joint a :Artist .
+
+:Eliza_Doolittle a :Artist .
+
+:Fab_Again a :Artist .
+
+:Faith_Hill a :Artist .
+
+:Gabrielle a :Artist .
+
+:Gary_Cooke a :Artist .
+
+:Mandy_Barnett a :Artist .
+
+:Michael_Feinstein a :Artist .
+
+:Natalie_Cole a :Artist .
+
+:Newsboys a :Artist .
+
+:Our_Lady_Peace a :Artist .
+
+:Rod_Stewart a :Artist .
+
+:Tony_Bennett a :Artist .
+
+:country_music a :Genre .
+
+:folk_music a :Genre .
+
+:gangsta_rap a :Genre .
+
+:hip-hop a :Genre .
+
+:house_music a :Genre .
+
+:jazz a :Genre .
+
+:nu_metal a :Genre .
+
+:reggae a :Genre .
+
+:rock_music a :Genre .
+
+:rockabilly a :Genre .
+
+:traditional_pop a :Genre .
+
+:trip_hop a :Genre .
 
 :The_Damned a :Artist .
 
-:Willie_Nelson a :Artist .
-
-:blues a :Genre .
-
-:indie_rock a :Genre .
+:drama_film a :Genre .
 
 :pop_music a :Genre .
 
-:rock_and_roll a :Genre .
+:surprise a :Emotion .
 
-:thrash_metal a :Genre .
+:disgust a :Emotion .
 
 :Unknown a :Genre .
 
-:drama_film a :Genre .
+:joy a :Emotion .
+
+:alternative_rock a :Genre .
+
+:anger a :Emotion .
+
+:neutral a :Emotion .
+
+:Emotion a :Class .
+
+:sadness a :Emotion .
+
+:fear a :Emotion .
 
 :Genre a :Class .
 
