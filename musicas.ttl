@@ -1,18 +1,75 @@
 @prefix : <http://example.org/> .
 
+<http://example.org/A.D.I.D.A.S.> a :Music ;
+    :hasArtist :Korn ;
+    :hasEmotion :anger,
+        :fear ;
+    :hasGenre :nu_metal .
+
+:A_Good_Day_\(Morning_Song\) a :Music ;
+    :hasArtist :Priscilla_Ahn ;
+    :hasEmotion :neutral ;
+    :hasGenre :folk_music .
+
+:Act_Naturally a :Music ;
+    :hasArtist :Brian_Hyland ;
+    :hasEmotion :sadness ;
+    :hasGenre :pop_music .
+
 :Alone a :Music ;
     :hasArtist :Gabrielle ;
     :hasEmotion :sadness ;
     :hasGenre :alternative_rock .
+
+:Always_Wanting_You a :Music ;
+    :hasArtist :Merle_Haggard ;
+    :hasEmotion :sadness ;
+    :hasGenre :country_music .
+
+:Am_I_Dreamin_ a :Music ;
+    :hasArtist :Xscape ;
+    :hasEmotion :neutral ;
+    :hasGenre :rhythm_and_blues .
 
 :America_the_Beautiful a :Music ;
     :hasArtist :Bob_Masteller ;
     :hasEmotion :joy ;
     :hasGenre :Unknown .
 
+:Animal_Crackers_in_My_Soup a :Music ;
+    :hasArtist :Shirley_Temple ;
+    :hasEmotion :disgust ;
+    :hasGenre :Unknown .
+
+:Animal_Kingdom a :Music ;
+    :hasArtist :Prince ;
+    :hasEmotion :disgust,
+        :fear ;
+    :hasGenre :jazz .
+
+:Anything a :Music ;
+    :hasArtist :Frank_Sinatra ;
+    :hasEmotion :joy ;
+    :hasGenre :alternative_rock .
+
+:Baby a :Music ;
+    :hasArtist :Dottie_West ;
+    :hasEmotion :sadness ;
+    :hasGenre :hip-hop .
+
 :Ballroom_Blitz a :Music ;
     :hasArtist :The_Damned ;
     :hasEmotion :fear ;
+    :hasGenre :drama_film .
+
+:Before_the_Night_Is_Over a :Music ;
+    :hasArtist :Gaelic_Storm ;
+    :hasEmotion :fear ;
+    :hasGenre :Celtic_music .
+
+:Big_Choice a :Music ;
+    :hasArtist :Face_to_Face ;
+    :hasEmotion :surprise ;
     :hasGenre :drama_film .
 
 :Black_Satellite a :Music ;
@@ -21,10 +78,26 @@
         :surprise ;
     :hasGenre :alternative_rock .
 
+:Borstal_Boys a :Music ;
+    :hasArtist :Faces ;
+    :hasEmotion :sadness ;
+    :hasGenre :hard_rock .
+
 :Brand_New_Day a :Music ;
     :hasArtist :Gary_Cooke ;
     :hasEmotion :sadness ;
     :hasGenre :alternative_rock .
+
+:Cause_for_Alarm a :Music ;
+    :hasArtist :The_Boxer_Rebellion ;
+    :hasEmotion :anger ;
+    :hasGenre :indie_rock .
+
+:Communication a :Music ;
+    :hasArtist <http://example.org/G._Love_&_Special_Sauce> ;
+    :hasEmotion :fear,
+        :neutral ;
+    :hasGenre :alternative_hip-hop .
 
 :Concrete_Jungle a :Music ;
     :hasArtist :Bob_Marley ;
@@ -38,8 +111,40 @@
     :hasEmotion :anger ;
     :hasGenre :alternative_rock .
 
+:Cumberland_Mountain_Bear_Chase a :Music ;
+    :hasArtist :Pete_Seeger ;
+    :hasEmotion :fear ;
+    :hasGenre :traditional_folk_music .
+
 <http://example.org/Da_Ya_Think_I_m_Sexy_[Craig_J._s_Gospel_Love_Mix]> a :Music ;
     :hasArtist :Rod_Stewart ;
+    :hasEmotion :fear ;
+    :hasGenre :rock_music .
+
+:Dance_With_Me a :Music ;
+    :hasArtist :Jump5 ;
+    :hasEmotion :joy,
+        :neutral ;
+    :hasGenre :rock_music .
+
+:Do_Ya_Think_I_m_Sexy a :Music ;
+    :hasArtist :Rod_Stewart ;
+    :hasEmotion :fear ;
+    :hasGenre :rock_music .
+
+:Do_Your_Thang a :Music ;
+    :hasArtist :Biz_Markie ;
+    :hasEmotion :anger,
+        :fear ;
+    :hasGenre :hip-hop .
+
+:Easy a :Music ;
+    :hasArtist :Emiliana_Torrini ;
+    :hasEmotion :sadness ;
+    :hasGenre :country_rock .
+
+:Ebb_Tide a :Music ;
+    :hasArtist :Tony_Martin ;
     :hasEmotion :fear ;
     :hasGenre :rock_music .
 
@@ -57,21 +162,114 @@
         :sadness ;
     :hasGenre :folk_music .
 
+:Every_Tear_That_Falls a :Music ;
+    :hasArtist :Brian_Setzer ;
+    :hasEmotion :fear ;
+    :hasGenre :alternative_rock .
+
+:Fake a :Music ;
+    :hasArtist :Busted ;
+    :hasEmotion :fear ;
+    :hasGenre :punk_rock .
+
+:Far_Away_Places a :Music ;
+    :hasArtist :Willie_Nelson ;
+    :hasEmotion :fear ;
+    :hasGenre :blues .
+
+:Far_Away_from_Home a :Music ;
+    :hasArtist :Groove_Coverage ;
+    :hasEmotion :sadness ;
+    :hasGenre :trance .
+
+:Fingertip a :Music ;
+    :hasArtist :Aqualung ;
+    :hasEmotion :fear ;
+    :hasGenre :alternative_rock .
+
+:For_da_Love_of_da_Game a :Music ;
+    :hasArtist :DJ_Jazzy_Jeff ;
+    :hasEmotion :sadness ;
+    :hasGenre :hip-hop .
+
+:Get_Happy a :Music ;
+    :hasArtist :John_Williams ;
+    :hasEmotion :fear,
+        :joy ;
+    :hasGenre :biography .
+
+:Get_Out_of_Town a :Music ;
+    :hasArtist :Lena_Horne ;
+    :hasEmotion :anger ;
+    :hasGenre :jazz .
+
+:Get_to_Heaven a :Music ;
+    :hasArtist :Out_of_Eden ;
+    :hasEmotion :fear ;
+    :hasGenre :rhythm_and_blues .
+
+:Ghidorah_Legobricks a :Music ;
+    :hasArtist :Dat_Adam ;
+    :hasEmotion :fear ;
+    :hasGenre :hip-hop .
+
 :Good_II_Me a :Music ;
     :hasArtist :Bun_B ;
     :hasEmotion :disgust,
         :neutral ;
     :hasGenre :gangsta_rap .
 
+:Got_Love_for_Sale a :Music ;
+    :hasArtist :Kiss ;
+    :hasEmotion :fear ;
+    :hasGenre :hard_rock .
+
+:Have_Yourself_a_Merry_Little_Christmas a :Music ;
+    :hasArtist :Michael_Bolton ;
+    :hasEmotion :joy ;
+    :hasGenre :pop_rock .
+
+:He_Hit_Me a :Music ;
+    :hasArtist :Grizzly_Bear ;
+    :hasEmotion :joy ;
+    :hasGenre :psychedelic_rock .
+
+:Heavens a :Music ;
+    :hasArtist :James ;
+    :hasEmotion :fear ;
+    :hasGenre :alternative_rock .
+
 :Hey_Jude a :Music ;
     :hasArtist :Bill_Black ;
     :hasEmotion :fear ;
     :hasGenre :rockabilly .
 
+:I_Cannot_Get_You_Out_of_My_System a :Music ;
+    :hasArtist :Newsboys ;
+    :hasEmotion :anger,
+        :fear,
+        :neutral ;
+    :hasGenre :contemporary_Christian_music .
+
+:I_Couldn_t_Believe_It_Was_True a :Music ;
+    :hasArtist :Wilma_Lee_Cooper ;
+    :hasEmotion :surprise ;
+    :hasGenre :folk_music .
+
 :I_Do_Not_Know_a_Day_I_Did_Not_Love_You a :Music ;
     :hasArtist :Tony_Bennett ;
     :hasEmotion :sadness ;
     :hasGenre :jazz .
+
+:I_Dream_a_Highway a :Music ;
+    :hasArtist :Elan_Mehler ;
+    :hasEmotion :fear ;
+    :hasGenre :Unknown .
+
+:I_Feel_Lonely a :Music ;
+    :hasArtist :Sasha ;
+    :hasEmotion :sadness ;
+    :hasGenre :pop_music .
 
 :I_Think_I_m_Wonderful a :Music ;
     :hasArtist :The_Damned ;
@@ -79,10 +277,30 @@
         :fear ;
     :hasGenre :drama_film .
 
+:I_Wish_You_Love a :Music ;
+    :hasArtist :Judy_Garland ;
+    :hasEmotion :sadness ;
+    :hasGenre :pop_music .
+
 <http://example.org/In_the_Darkness_[Trance_Mix]> a :Music ;
     :hasArtist :Darude ;
     :hasEmotion :fear ;
     :hasGenre :house_music .
+
+:It_s_Gonna_Take_Time a :Music ;
+    :hasArtist :Embrace ;
+    :hasEmotion :sadness ;
+    :hasGenre :hardcore_punk .
+
+:Jazzy_s_Groove a :Music ;
+    :hasArtist <http://example.org/DJ_Jazzy_Jeff_&_the_Fresh_Prince> ;
+    :hasEmotion :fear ;
+    :hasGenre :hip-hop .
+
+:Joining_the_Dots a :Music ;
+    :hasArtist :Arctic_Monkeys ;
+    :hasEmotion :fear ;
+    :hasGenre :alternative_rock .
 
 :Just_Around_the_Eyes a :Music ;
     :hasArtist :Faith_Hill ;
@@ -100,10 +318,89 @@
     :hasEmotion :neutral ;
     :hasGenre :nu_metal .
 
+:Like_I_Do a :Music ;
+    :hasArtist :Live ;
+    :hasEmotion :fear ;
+    :hasGenre :alternative_rock .
+
 :Lollipops_and_Roses a :Music ;
     :hasArtist :Natalie_Cole ;
     :hasEmotion :neutral ;
     :hasGenre :pop_music .
+
+:Lost_in_the_Crowd a :Music ;
+    :hasArtist :Shinedown ;
+    :hasEmotion :fear,
+        :sadness ;
+    :hasGenre :alternative_rock .
+
+:Mercy_Mercy_Me_\(The_Ecology\) a :Music ;
+    :hasArtist :Eleanor_McEvoy ;
+    :hasEmotion :fear ;
+    :hasGenre :rock_music .
+
+:Midnight_Rider a :Music ;
+    :hasArtist :Patti_Smith ;
+    :hasEmotion :fear,
+        :neutral,
+        :sadness ;
+    :hasGenre :Unknown .
+
+<http://example.org/My_Way_[Master][#]> a :Music ;
+    :hasArtist :Elvis_Presley ;
+    :hasEmotion :neutral ;
+    :hasGenre :rock_and_roll .
+
+:Now_You_re_in_Heaven a :Music ;
+    :hasArtist :Julian_Lennon ;
+    :hasEmotion :joy ;
+    :hasGenre :rock_music .
+
+:One_in_a_Row a :Music ;
+    :hasArtist :Willie_Nelson ;
+    :hasEmotion :joy ;
+    :hasGenre :blues .
+
+:One_on_One a :Music ;
+    :hasArtist :Alabama ;
+    :hasEmotion :surprise ;
+    :hasGenre :country_music .
+
+:Out_of_the_Dark a :Music ;
+    :hasArtist :Mandisa ;
+    :hasEmotion :fear ;
+    :hasGenre :pop_music .
+
+:Please_Don_t_Talk_About_Me_When_I_m_Gone a :Music ;
+    :hasArtist :Pete_Seeger ;
+    :hasEmotion :fear ;
+    :hasGenre :traditional_folk_music .
+
+<http://example.org/Powaful_Impak!> a :Music ;
+    :hasArtist :Black_Moon ;
+    :hasEmotion :anger ;
+    :hasGenre :rock_music .
+
+:Queen_of_Sorrow a :Music ;
+    :hasArtist :Black_Label_Society ;
+    :hasEmotion :sadness ;
+    :hasGenre :heavy_metal .
+
+<http://example.org/Return_to_Sender_(From_Girls!_Girls!_Girls!)> a :Music ;
+    :hasArtist :Elvis_Presley ;
+    :hasEmotion :anger,
+        :sadness ;
+    :hasGenre :rock_and_roll .
+
+:Ride__Em_on_Down a :Music ;
+    :hasArtist :The_Rolling_Stones ;
+    :hasEmotion :anger ;
+    :hasGenre :rock_and_roll .
+
+:Simple_Creed a :Music ;
+    :hasArtist :Live ;
+    :hasEmotion :anger ;
+    :hasGenre :alternative_rock .
 
 :So_High a :Music ;
     :hasArtist :Eliza_Doolittle ;
@@ -111,6 +408,18 @@
         :joy,
         :sadness ;
     :hasGenre :pop_music .
+
+:Sweet_Sucker_Dance a :Music ;
+    :hasArtist :Joni_Mitchell ;
+    :hasEmotion :sadness ;
+    :hasGenre :jazz .
+
+:Tell_Me a :Music ;
+    :hasArtist :Case ;
+    :hasEmotion :anger,
+        :fear,
+        :neutral ;
+    :hasGenre <http://example.org/contemporary_R&B> .
 
 <http://example.org/That_s_Entertainment!> a :Music ;
     :hasArtist :Michael_Feinstein ;
@@ -123,11 +432,31 @@
     :hasEmotion :fear ;
     :hasGenre :trip_hop .
 
+<http://example.org/The_Half_of_It,_Dearie,_Blues> a :Music ;
+    :hasArtist :Ella_Fitzgerald ;
+    :hasEmotion :sadness ;
+    :hasGenre :jazz .
+
+<http://example.org/The_Last_Place_That_Love_Lives_[Live]> a :Music ;
+    :hasArtist :The_Black_Crowes ;
+    :hasEmotion :sadness ;
+    :hasGenre :rock_music .
+
+:The_Little_Drummer_Boy a :Music ;
+    :hasArtist :Bermuda_Tree_Frogs ;
+    :hasEmotion :sadness ;
+    :hasGenre :Unknown .
+
 :The_Lord_s_Prayer a :Music ;
     :hasArtist :Christopher_West ;
     :hasEmotion :anger,
         :disgust ;
     :hasGenre :Unknown .
+
+:The_Oldest_Path a :Music ;
+    :hasArtist :The_Coral ;
+    :hasEmotion :fear ;
+    :hasGenre :indie_rock .
 
 :The_Wacky_World_of_Rapid_Transit a :Music ;
     :hasArtist :Del_the_Funky_Homosapien ;
@@ -139,109 +468,341 @@
     :hasEmotion :fear ;
     :hasGenre :Unknown .
 
+:Tomorrow_Mountain a :Music ;
+    :hasArtist :Lena_Horne ;
+    :hasEmotion :joy ;
+    :hasGenre :jazz .
+
+:Trust a :Music ;
+    :hasArtist :Megadeth ;
+    :hasEmotion :sadness ;
+    :hasGenre :J-pop .
+
+:Visions_of_the_Sea a :Music ;
+    :hasArtist :Elf_Power ;
+    :hasEmotion :fear ;
+    :hasGenre :indie_rock .
+
+:Voice_of_Contention a :Music ;
+    :hasArtist :Hatebreed ;
+    :hasEmotion :sadness ;
+    :hasGenre :hardcore_punk .
+
+:When_I_m_With_You a :Music ;
+    :hasArtist :Sheriff ;
+    :hasEmotion :sadness ;
+    :hasGenre :shoot__em_up .
+
+:When_Lights_Are_Low a :Music ;
+    :hasArtist :Jaki_Byard ;
+    :hasEmotion :fear,
+        :joy ;
+    :hasGenre :jazz .
+
+:When_the_Night_Comes_Falling_from_the_Sky a :Music ;
+    :hasArtist :Michel_Montecrossa ;
+    :hasEmotion :fear ;
+    :hasGenre :Unknown .
+
+:Where_or_When a :Music ;
+    :hasArtist :Ella_Fitzgerald ;
+    :hasEmotion :neutral ;
+    :hasGenre :jazz .
+
+:Wimoweh_\(The_Lion_Sleeps_Tonight\) a :Music ;
+    :hasArtist :Pete_Seeger ;
+    :hasEmotion :fear ;
+    :hasGenre :traditional_folk_music .
+
+:Within_Hours a :Music ;
+    :hasArtist :Dappled_Cities ;
+    :hasEmotion :neutral ;
+    :hasGenre :indie_rock .
+
+:Wolf_s_Mouth a :Music ;
+    :hasArtist :Kevin_Devine ;
+    :hasEmotion :fear ;
+    :hasGenre :indie_rock .
+
+:You_Can_t_Lose_a_Broken_Heart a :Music ;
+    :hasArtist :Tony_Bennett ;
+    :hasEmotion :anger,
+        :sadness ;
+    :hasGenre :jazz .
+
 :hasArtist a :Property .
 
 :hasEmotion a :Property .
 
 :hasGenre a :Property .
 
+:Alabama a :Artist .
+
 :American_Hi-Fi a :Artist .
 
 :Anja_Garbarek a :Artist .
 
+:Aqualung a :Artist .
+
+:Arctic_Monkeys a :Artist .
+
 :Audrey_Assad a :Artist .
 
+:Bermuda_Tree_Frogs a :Artist .
+
 :Bill_Black a :Artist .
+
+:Biz_Markie a :Artist .
+
+:Black_Label_Society a :Artist .
+
+:Black_Moon a :Artist .
 
 :Bob_Marley a :Artist .
 
 :Bob_Masteller a :Artist .
 
+:Brian_Hyland a :Artist .
+
+:Brian_Setzer a :Artist .
+
 :Bun_B a :Artist .
+
+:Busted a :Artist .
+
+:Case a :Artist .
+
+:Celtic_music a :Genre .
 
 :Christopher_West a :Artist .
 
+:DJ_Jazzy_Jeff a :Artist .
+
+<http://example.org/DJ_Jazzy_Jeff_&_the_Fresh_Prince> a :Artist .
+
+:Dappled_Cities a :Artist .
+
 :Darude a :Artist .
+
+:Dat_Adam a :Artist .
 
 :Del_the_Funky_Homosapien a :Artist .
 
+:Dottie_West a :Artist .
+
 :Dovetail_Joint a :Artist .
+
+:Elan_Mehler a :Artist .
+
+:Eleanor_McEvoy a :Artist .
+
+:Elf_Power a :Artist .
 
 :Eliza_Doolittle a :Artist .
 
+:Embrace a :Artist .
+
+:Emiliana_Torrini a :Artist .
+
 :Fab_Again a :Artist .
+
+:Face_to_Face a :Artist .
+
+:Faces a :Artist .
 
 :Faith_Hill a :Artist .
 
+:Frank_Sinatra a :Artist .
+
+<http://example.org/G._Love_&_Special_Sauce> a :Artist .
+
 :Gabrielle a :Artist .
+
+:Gaelic_Storm a :Artist .
 
 :Gary_Cooke a :Artist .
 
+:Grizzly_Bear a :Artist .
+
+:Groove_Coverage a :Artist .
+
+:Hatebreed a :Artist .
+
+:J-pop a :Genre .
+
+:Jaki_Byard a :Artist .
+
+:James a :Artist .
+
+:John_Williams a :Artist .
+
+:Joni_Mitchell a :Artist .
+
+:Judy_Garland a :Artist .
+
+:Julian_Lennon a :Artist .
+
+:Jump5 a :Artist .
+
+:Kevin_Devine a :Artist .
+
+:Kiss a :Artist .
+
+:Korn a :Artist .
+
+:Mandisa a :Artist .
+
 :Mandy_Barnett a :Artist .
+
+:Megadeth a :Artist .
+
+:Merle_Haggard a :Artist .
+
+:Michael_Bolton a :Artist .
 
 :Michael_Feinstein a :Artist .
 
-:Natalie_Cole a :Artist .
+:Michel_Montecrossa a :Artist .
 
-:Newsboys a :Artist .
+:Natalie_Cole a :Artist .
 
 :Our_Lady_Peace a :Artist .
 
-:Rod_Stewart a :Artist .
+:Out_of_Eden a :Artist .
 
-:Tony_Bennett a :Artist .
+:Patti_Smith a :Artist .
 
-:country_music a :Genre .
+:Prince a :Artist .
 
-:folk_music a :Genre .
+:Priscilla_Ahn a :Artist .
+
+:Sasha a :Artist .
+
+:Sheriff a :Artist .
+
+:Shinedown a :Artist .
+
+:Shirley_Temple a :Artist .
+
+:The_Black_Crowes a :Artist .
+
+:The_Boxer_Rebellion a :Artist .
+
+:The_Coral a :Artist .
+
+:The_Rolling_Stones a :Artist .
+
+:Tony_Martin a :Artist .
+
+:Wilma_Lee_Cooper a :Artist .
+
+:Xscape a :Artist .
+
+:alternative_hip-hop a :Genre .
+
+:biography a :Genre .
+
+:contemporary_Christian_music a :Genre .
+
+<http://example.org/contemporary_R&B> a :Genre .
+
+:country_rock a :Genre .
 
 :gangsta_rap a :Genre .
 
-:hip-hop a :Genre .
+:heavy_metal a :Genre .
 
 :house_music a :Genre .
 
-:jazz a :Genre .
+:pop_rock a :Genre .
 
-:nu_metal a :Genre .
+:psychedelic_rock a :Genre .
+
+:punk_rock a :Genre .
 
 :reggae a :Genre .
 
-:rock_music a :Genre .
-
 :rockabilly a :Genre .
+
+:shoot__em_up a :Genre .
 
 :traditional_pop a :Genre .
 
+:trance a :Genre .
+
 :trip_hop a :Genre .
+
+:Ella_Fitzgerald a :Artist .
+
+:Elvis_Presley a :Artist .
+
+:Lena_Horne a :Artist .
+
+:Live a :Artist .
+
+:Newsboys a :Artist .
+
+:Rod_Stewart a :Artist .
 
 :The_Damned a :Artist .
 
+:Tony_Bennett a :Artist .
+
+:Willie_Nelson a :Artist .
+
+:blues a :Genre .
+
+:hard_rock a :Genre .
+
+:hardcore_punk a :Genre .
+
+:nu_metal a :Genre .
+
+:rhythm_and_blues a :Genre .
+
+:Pete_Seeger a :Artist .
+
+:country_music a :Genre .
+
 :drama_film a :Genre .
 
-:pop_music a :Genre .
+:folk_music a :Genre .
 
-:surprise a :Emotion .
+:rock_and_roll a :Genre .
+
+:traditional_folk_music a :Genre .
 
 :disgust a :Emotion .
 
-:Unknown a :Genre .
+:indie_rock a :Genre .
 
-:joy a :Emotion .
+:surprise a :Emotion .
 
-:alternative_rock a :Genre .
+:hip-hop a :Genre .
 
-:anger a :Emotion .
-
-:neutral a :Emotion .
+:pop_music a :Genre .
 
 :Emotion a :Class .
 
+:rock_music a :Genre .
+
+:Unknown a :Genre .
+
+:jazz a :Genre .
+
+:alternative_rock a :Genre .
+
+:joy a :Emotion .
+
+:neutral a :Emotion .
+
+:anger a :Emotion .
+
 :sadness a :Emotion .
 
-:fear a :Emotion .
-
 :Genre a :Class .
+
+:fear a :Emotion .
 
 :Artist a :Class .
 
