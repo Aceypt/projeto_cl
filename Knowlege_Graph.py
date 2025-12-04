@@ -1,4 +1,4 @@
-#from datasets import load_dataset
+from datasets import load_dataset
 import os
 from transformers import pipeline
 import pandas as pd
@@ -116,33 +116,37 @@ group_map = {
     "Emotion": "emotion"
 }
 
-# Adicionar nós e arestas: para cada triple, se for rdf:type (instância->classe) já processado -> ignorar visualmente.
+PROPERTIES = {EX.hasArtist, EX.hasGenre, EX.hasEmotion}
+
 for s, p, o in g:
-    # Só mostrar indivíduos, não classes
-    if o in (EX.Music, EX.Artist, EX.Genre):
-        continue
-    # ignorar declarações do próprio esquema (ex.: EX.Music rdf:type EX.Class) e rdf:type ligações já processadas
-    if s in {EX.Music, EX.Artist, EX.Genre}:
-        continue
-    if p == RDF.type and o in class_uris:
-        # Não criar aresta rdf:type visível — apenas asseguramos node_type acima
+
+    # Ignorar nós que são propriedades
+    if s in PROPERTIES or o in PROPERTIES:
         continue
 
-    # garantir nós s e o com labels legíveis
+    # Ignorar schema (classes, declaração de propriedades, rdf:type etc.)
+    if s in {EX.Music, EX.Artist, EX.Genre, EX.Emotion, EX.Class, EX.Property}:
+        continue
+    if p == RDF.type:
+        continue
+
+    # Criar nó de s
     if s not in seen_nodes:
         lbl = pretty_label(s)
         grp = group_map.get(node_type.get(s, "Other"), "other")
         net.add_node(str(s), label=lbl, title=str(s), group=grp)
         seen_nodes.add(s)
+
+    # Criar nó de o
     if o not in seen_nodes:
         lbl = pretty_label(o)
         grp = group_map.get(node_type.get(o, "Other"), "other")
         net.add_node(str(o), label=lbl, title=str(o), group=grp)
         seen_nodes.add(o)
 
-    # adicionar aresta com rótulo do predicado (localname)
+    # Criar aresta (rótulo do predicado, mas SEM criar nó do predicado!)
     pred_label = pretty_label(p)
-    net.add_edge(str(s), str(o), label=pred_label, title=pred_label)
+    net.add_edge(str(s), str(o), label=pred_label)
 
 
 # PyVis aplica cores automaticamente por group.
